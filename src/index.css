@@ -1,0 +1,20 @@
+@import "tailwindcss" source("../src");
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root,
+#app,
+#app > div {
+  height: 100%;
+}
