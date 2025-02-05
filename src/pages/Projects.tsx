@@ -20,11 +20,11 @@ export const Projects = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Projects</h1>
+    <div className="mt-4">
+      <h1 className="text-3xl text-font font-bold mb-4">Projects</h1>
 
       {/* Project grid/Carousel container */}
-      <div className="project_wrapper animate-fadeInUp overflow-y-auto mb-8">
+      <div className="animate-fadeInUp overflow-y-auto mb-8">
         {projects.map((project, i) => (
           <CarouselItem
             key={i}

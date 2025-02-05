@@ -23,11 +23,7 @@ export const Profile: React.FC = () => {
   return (
     <div className="w-full flex flex-col sm:flex-row items-center text-gray-900">
       <div className="w-full h-full flex items-center justify-center">
-        <img
-          alt="Profile"
-          src={selfPhoto}
-          className="rounded-full h-[220px] sm:h-[100px] md:h-[300px]"
-        />
+        <img alt="Profile" src={selfPhoto} />
       </div>
 
       <div className="w-full h-full flex flex-col justify-center items-center animate-fadeInUp p-4">
@@ -66,37 +62,38 @@ export const Profile: React.FC = () => {
           </div>
         </div>
 
-        <h1 className="text-3xl font-bold mt-4">
-          Hello! I'm{" "}
-          <span className="text-blue-500">Full Stack Web Developer</span>
-        </h1>
-        <h3 className="text-xl mt-2">with 2+ years experience</h3>
-
-        <div className="flex w-fit mt-4 space-x-4">
-          <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
-            <a
-              href="mailto:haruru898@gmail.com"
-              className="hover:text-gray-300"
-            >
-              Email
-            </a>
-          </button>
-          <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
-            <a
-              href="https://github.com/anbyjap"
-              className="hover:text-gray-300"
-            >
-              GitHub
-            </a>
-          </button>
-          <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
-            <a
-              href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
-              className="hover:text-gray-300"
-            >
-              LinkedIn
-            </a>
-          </button>
+        <div className="text-font">
+          <h1 className="text-3xl font-bold text-font mt-4">
+            Hello! I'm{" "}
+            <span className="text-accent">Full Stack Web Developer</span>
+          </h1>
+          <h3 className="text-xl mt-2">with 2+ years experience</h3>
+          <div className="flex w-fit mt-4 space-x-4">
+            <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+              <a
+                href="mailto:haruru898@gmail.com"
+                className="hover:text-gray-300"
+              >
+                Email
+              </a>
+            </button>
+            <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+              <a
+                href="https://github.com/anbyjap"
+                className="hover:text-gray-300"
+              >
+                GitHub
+              </a>
+            </button>
+            <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+              <a
+                href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
+                className="hover:text-gray-300"
+              >
+                LinkedIn
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>

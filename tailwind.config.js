@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        main: "#0479C3",
-        accent: "#F59E0B",
+        main: "#252b48",
+        second: "#445069",
+        accent: "#f7e987",
+        light: "#5b9a8b",
+        icon: "#fff",
+        font: "#f1f6f5",
       },
       width: {
         crtButtonSize: 60,

@@ -28,19 +28,19 @@ export const Home: React.FC = () => {
             <button
               key={index}
               onClick={() => setTabIndex(index)}
-              className={`flex items-center justify-center p-4 w-full bg-transparent cursor-pointer ${
+              className={`flex items-center justify-center p-4 w-full bg-second cursor-pointer ${
                 tabIndex === index
-                  ? "text-yellow-500"
-                  : "text-gray-500 hover:bg-blue-200 hover:text-yellow-500"
+                  ? "text-accent"
+                  : "text-font hover:bg-blue-200 "
               }`}
             >
-              {tab.icon}
+              {tab.label}
             </button>
           ))}
         </nav>
       </header>
 
-      <main className="flex-1 p-4 overflow-auto bg-white">
+      <main className="flex-1 p-4 overflow-auto bg-main">
         <Profile />
         <Projects />
       </main>
