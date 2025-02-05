@@ -8,7 +8,6 @@ interface NewCarouselItemProps extends CarouselItemProps {
   expanded: boolean;
   hidden: boolean;
   expandedItemIndex: null | number;
-  windowWidth: number;
 }
 
 const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
@@ -40,13 +39,11 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
       <div className="p-4">
         <h5 className="text-xl font-semibold mb-2">{props.name}</h5>
 
-        {props.windowWidth > 768 && (
-          <div className="flex flex-wrap gap-2 mb-2">
-            {props.skills.map((skillName) => (
-              <SkillsIcon key={skillName} name={skillName} />
-            ))}
-          </div>
-        )}
+        <div className="flex flex-wrap gap-2 mb-2">
+          {props.skills.map((skillName) => (
+            <SkillsIcon key={skillName} name={skillName} />
+          ))}
+        </div>
 
         {props.expanded && (
           <div className="mt-4">
