@@ -20,7 +20,7 @@ export const ProjectModal:React.FC<ProjectModalProps> = ({project, onCloseModal}
                 >
                     <div 
                         onClick={e => e.stopPropagation()}
-                        className="flex flex-col bg-second w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
+                        className="flex flex-col rounded-md bg-second w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
                     >
                         <div
                             className="sticky top-0 z-30 flex items-center justify-between p-2 border-b border-accent"
