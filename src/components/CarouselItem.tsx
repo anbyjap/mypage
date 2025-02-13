@@ -17,7 +17,7 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
     <div
       onClick={props.onExpand}
       className={`
-        col-span-6 sm:col-span-6 lg:col-span-4 mt-2
+        col-span-6 sm:col-span-3
         bg-white rounded overflow-hidden cursor-pointer
         max-w-sm hover:shadow-card
         ${props.expanded ? "ring-4 ring-blue-300" : ""}
@@ -27,15 +27,15 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
         <img
           src={props.imgSrc}
           alt={props.name}
-          className="w-fit object-contain flex flex-col justify-between flex-grow"
+          className="sm:h-[50px] md:h-[200px] object-contain flex flex-col justify-between flex-grow"
         />
-        <div className="p-3 min-h-[120px] max-h-[150px]">
-          <h5 className="text-xl font-semibold">{props.name}</h5>
-          <div className="flex flex-wrap gap-2">
+        <div className="p-3 max-h-[150px] sm:h-[20px] md:h-[50px]">
+          <h5 className="text-xl font-semibold truncate">{props.name}</h5>
+          {/* <div className="flex flex-wrap gap-sm:block">
             {props.skills.map((skillName) => (
               <SkillsIcon key={skillName} name={skillName} />
             ))}
-          </div>
+          </div> */}
           {props.expanded && (
             <div className="mt-4">
               <div className="flex items-center justify-between pb-2 border-b">
