@@ -20,10 +20,10 @@ export const ProjectModal:React.FC<ProjectModalProps> = ({project, onCloseModal}
                 >
                     <div 
                         onClick={e => e.stopPropagation()}
-                        className="bg-second w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
+                        className="flex flex-col bg-second w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
                     >
                         <div
-                            className="flex items-center justify-between p-2 border-b border-accent"
+                            className="sticky top-0 z-30 flex items-center justify-between p-2 border-b border-accent"
                         >
                             <div className="flex flex-wrap gap-2">
                                 {project.skills.map((skillName) => (
@@ -32,10 +32,8 @@ export const ProjectModal:React.FC<ProjectModalProps> = ({project, onCloseModal}
                             </div>
                             <span className="text-xl text-font">&darr;</span>
                         </div>
-                        <div className="h-full overflow-y-auto">
-                            <div className="mt-2">
-                                <NewlineText text={project.description} />
-                            </div>
+                        <div className="overflow-y-auto py-2">
+                            <NewlineText text={project.description} />
                             {project.link !== "" && (
                             <div className="flex justify-end mt-4">
                                 <a
