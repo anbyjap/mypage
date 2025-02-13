@@ -47,7 +47,7 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-svh bg-main">
       <header className="sticky top-0 z-10 w-full h-[50px]">
         <nav className="flex justify-between w-full h-full bg-gray-200">
           {tabs.map((tab, index) => (
@@ -66,7 +66,7 @@ export const Home: React.FC = () => {
         </nav>
       </header>
 
-      <main className="h-svh overflow-auto bg-main grid grid-cols-12 gap-4 p-4">
+      <main className="grid grid-cols-12 gap-4 p-4">
         {/* profile */}
         <div className="col-span-12 w-full h-full flex flex-col justify-center items-center animate-fadeInUp">
           <div className="flex items-center justify-center">
@@ -136,11 +136,12 @@ export const Home: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>{" "}
+        </div>
         {/* projects */}
         <h1 className="col-span-12 text-3xl text-font font-bold">
           Projects
         </h1>
+
         {projects.map((project, i) => (
           <CarouselItem
             key={i}

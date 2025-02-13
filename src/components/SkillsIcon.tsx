@@ -20,7 +20,6 @@ export const SkillsIcon = ({ name, size = DEFAULT_SIZE, className }: Props) => {
         backgroundColor: "white",
         borderRadius: `${size - 20}px`,
         padding: "3px",
-        margin: "0 3px",
       }}
       className={className}
     />

@@ -1,5 +1,6 @@
 import React from "react";
 import { CarouselItemProps } from "../types";
+import { SkillsIcon } from "./SkillsIcon";
 
 interface NewCarouselItemProps extends CarouselItemProps {
   onExpand: () => void;
@@ -7,30 +8,43 @@ interface NewCarouselItemProps extends CarouselItemProps {
 
 const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
   return (
-    <div
-      onClick={props.onExpand}
-      className={`
-        col-span-6 sm:col-span-3
-        bg-white rounded overflow-hidden cursor-pointer
-        max-w-sm hover:shadow-card
-      `}
+    <div 
+      className="
+        sm:h-[300px] sm:min-w-[250px] sm:max-w-[300px] sm:col-span-6
+        md:col-span-4
+        lg:col-span-3
+        2xl:col-span-2
+        col-span-12
+        flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg"
+      onClick={props.onExpand}  
     >
-      <div className="flex flex-col justify-between">
+      <div className="grow flex items-center bg-main m-2.5 overflow-hidden text-white rounded-md">
         <img
           src={props.imgSrc}
           alt={props.name}
-          className="object-scale-down flex flex-col justify-between flex-grow"
         />
-        <div className="p-3">
-          <h5 className="text-xl font-semibold truncate">{props.name}</h5>
-          {/* <div className="flex flex-wrap gap-sm:block">
+      </div>
+      <div className="h-21">
+        <div className="py-1 px-4">
+          <div className="flex items-center">
+            <h6 className="text-main text-xl font-semibold truncate">
+              {props.name}
+            </h6>
+          </div>
+        
+          <p className="text-second leading-normal font-light truncate">
+            {props.description}
+          </p>
+        <div className="group my-1 inline-flex flex-wrap justify-center items-center gap-2">
+          <div className="flex flex-wrap gap-sm:block">
             {props.skills.map((skillName) => (
               <SkillsIcon key={skillName} name={skillName} />
             ))}
-          </div> */}
+          </div>
+        </div>
         </div>
       </div>
-    </div>
+    </div>  
   );
 };
 
