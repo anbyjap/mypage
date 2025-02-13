@@ -5,7 +5,7 @@ export const NewlineText = ({ text }: { text: string }) => {
 
   return (
     paragraphs.map((paragraph, index) => (
-      <p style={{ textIndent: "2em" }} key={index}>
+      <p className="text-font" style={{ textIndent: "2em" }} key={index}>
         {paragraph}
       </p>
     ))
