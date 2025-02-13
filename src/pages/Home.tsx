@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-// import { Profile } from "./Profile";
-// import { Projects } from "./Projects";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
 
 import { Name } from "../types";
-import { SkillsIcon } from "../components/SkillsIcon";
-import { NewlineText } from "../components/NewLineText";
+import { ProjectModal } from "../components/ProjectModal";
 
 interface Skill {
   name: Name;
@@ -69,7 +66,7 @@ export const Home: React.FC = () => {
         </nav>
       </header>
 
-      <main className="overflow-auto bg-main grid grid-cols-12 gap-4 p-4">
+      <main className="h-svh overflow-auto bg-main grid grid-cols-12 gap-4 p-4">
         {/* profile */}
         <div className="col-span-12 w-full h-full flex flex-col justify-center items-center animate-fadeInUp">
           <div className="flex items-center justify-center">
@@ -144,7 +141,6 @@ export const Home: React.FC = () => {
         <h1 className="col-span-12 text-3xl text-font font-bold">
           Projects
         </h1>
-        {/* <div className="animate-fadeInUp overflow-y-auto mb-8"> */}
         {projects.map((project, i) => (
           <CarouselItem
             key={i}
@@ -153,69 +149,16 @@ export const Home: React.FC = () => {
             skills={project.skills}
             imgSrc={project.imgSrc}
             link={project.link}
-            expanded={i === expandedItemIndex}
-            expandedItemIndex={expandedItemIndex}
-            hidden={expandedItemIndex !== null && i !== expandedItemIndex}
             onExpand={() => toggleExpand(i)}
           />
         ))}
-        {/* </div> */}
-        {expandedItemIndex !== null && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-            onClick={() => toggleExpand(null)}
-          >
-            <div
-              className="relative bg-white p-6 max-w-4xl w-1/2 h-[80%] overflow-y-auto rounded shadow-lg"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div>
-                {projects[expandedItemIndex]?.projectScreenshots?.map(
-                  (screenshot, index) => (
-                    <div key={index}>
-                      <img
-                        className="w-full h-auto object-contain"
-                        src={screenshot}
-                        alt={`Screenshot ${index}`}
-                      />
-                    </div>
-                  ),
-                )}
-              </div>
-
-              <div className="bg-white mt-4">
-                <h2 className="text-2xl font-bold">
-                  {projects[expandedItemIndex].name}
-                </h2>
-                <div>
-                  <h2 className="flex space-x-2">
-                    {projects[expandedItemIndex].skills.map((skillName) => (
-                      <SkillsIcon key={skillName} name={skillName} />
-                    ))}
-                  </h2>
-                  <p className="mt-2">
-                    <NewlineText
-                      text={projects[expandedItemIndex].description}
-                    />
-                  </p>
-                </div>
-                {projects[expandedItemIndex].link !== "" && (
-                  <div className="flex justify-end mt-4">
-                    <a
-                      href={projects[expandedItemIndex].link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-blue-500 hover:underline"
-                    >
-                      ⇒Go and see it
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
       </main>
+      {expandedItemIndex !== null && 
+        <ProjectModal 
+          project={projects[expandedItemIndex]}
+          onCloseModal={() => setExpandedItemIndex(null)}
+        />
+      }
     </div>
   );
 };
