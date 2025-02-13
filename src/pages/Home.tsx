@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
 
-import selfPhoto from "../images/faceimage.png";
 import { Name } from "../types";
 import { SkillsIcon } from "../components/SkillsIcon";
 import { NewlineText } from "../components/NewLineText";
@@ -72,12 +71,9 @@ export const Home: React.FC = () => {
 
       <main className="overflow-auto bg-main grid grid-cols-12 gap-4 p-4">
         {/* profile */}
-        <div className="col-span-7 w-full h-full flex items-center justify-center">
-          <img alt="Profile" src={selfPhoto} />
-        </div>
-        <div className="col-span-5 w-full h-full flex flex-col justify-center items-center animate-fadeInUp p-4">
-          <div className="flex items-center justify-center min-h-[10vh]">
-            <div className="relative w-[200%] h-20 overflow-hidden">
+        <div className="col-span-12 w-full h-full flex flex-col justify-center items-center animate-fadeInUp">
+          <div className="flex items-center justify-center">
+            <div className="relative w-[200%] overflow-hidden">
               <div className="absolute left-0 w-[200%] flex items-center justify-around h-20 animate-scroll">
                 {skills.map((skill, index) => (
                   <button
@@ -145,7 +141,7 @@ export const Home: React.FC = () => {
           </div>
         </div>{" "}
         {/* projects */}
-        <h1 className="col-span-12 text-3xl text-font font-bold mb-4">
+        <h1 className="col-span-12 text-3xl text-font font-bold">
           Projects
         </h1>
         {/* <div className="animate-fadeInUp overflow-y-auto mb-8"> */}
