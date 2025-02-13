@@ -107,7 +107,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
           <div className="text-font">
-            <h1 className="text-3xl font-bold text-font mt-4">
+            <h1 className="text-3xl font-bold text-font">
               Hello! I'm{" "}
               <span className="text-accent">Full Stack Web Developer</span>
             </h1>
