@@ -66,7 +66,7 @@ export const Home: React.FC = () => {
         </nav>
       </header>
 
-      <main className="grid grid-cols-12 gap-4 p-4">
+      <body className="h-fit bg-main grid grid-cols-12 gap-4 p-4">
         {/* profile */}
         <div className="col-span-12 w-full h-full flex flex-col justify-center items-center animate-fadeInUp">
           <div className="flex items-center justify-center">
@@ -153,7 +153,7 @@ export const Home: React.FC = () => {
             onExpand={() => toggleExpand(i)}
           />
         ))}
-      </main>
+      </body>
       {expandedItemIndex !== null && 
         <ProjectModal 
           project={projects[expandedItemIndex]}

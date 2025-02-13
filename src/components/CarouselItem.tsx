@@ -10,11 +10,11 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
   return (
     <div 
       className="
-        sm:h-[300px] sm:min-w-[250px] sm:max-w-[300px] sm:col-span-6
+        sm:h-[250px] sm:min-w-[250px] sm:max-w-[300px] sm:col-span-6
         md:col-span-4
         lg:col-span-3
         2xl:col-span-2
-        col-span-12
+        col-span-6
         flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg"
       onClick={props.onExpand}  
     >
@@ -24,17 +24,13 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
           alt={props.name}
         />
       </div>
-      <div className="h-21">
+      <div className="h-18">
         <div className="py-1 px-4">
           <div className="flex items-center">
             <h6 className="text-main text-xl font-semibold truncate">
               {props.name}
             </h6>
           </div>
-        
-          <p className="text-second leading-normal font-light truncate">
-            {props.description}
-          </p>
         <div className="group my-1 inline-flex flex-wrap justify-center items-center gap-2">
           <div className="flex flex-wrap gap-sm:block">
             {props.skills.map((skillName) => (
