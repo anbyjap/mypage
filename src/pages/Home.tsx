@@ -61,28 +61,28 @@ export const Home: React.FC = () => {
                 Hello! I'm{" "}
                 <span className="text-accent">Full Stack Web Developer</span>
               </h1>
-              <h3 className="text-xl mt-2">with 2+ years experience</h3>
+              <h3 className="text-xl text-fontSub mt-2">with 3+ years experience</h3>
               <div className="flex w-fit mt-4 space-x-4">
-                <button className="text-left text-font  bg-transparent border-0 cursor-pointer outline-none p-0">
+                <button className="text-font  bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="mailto:haruru898@gmail.com"
-                    className="hover:text-gray-300"
+                    className="hover:opacity-30 focus:opacity-100"
                   >
                     <FaMailBulk size={25} />
                   </a>
                 </button>
-                <button className=" text-left text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="https://github.com/anbyjap"
-                    className="hover:text-gray-300"
+                    className="hover:opacity-30 focus:opacity-100"
                   >
                     <FaGithub size={25} />
                   </a>
                 </button>
-                <button className="text-left text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
-                    className="hover:text-gray-300"
+                    className="hover:opacity-30 focus:opacity-100"
                   >
                     <FaLinkedin size={25} />
                   </a>
