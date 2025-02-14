@@ -16,7 +16,7 @@ export const SkillsIcon = ({ name, size = DEFAULT_SIZE, font_color = DEFAULT_FON
   return (
     <SkillIcon
       size={size}
-      className={`h-[${size}px] w-[${size}px] rounded-lg text-${font_color}`}
+      className={`h-[${size}px] w-[${size}px] rounded-lg text-${font_color} opacity-70`}
     />
   );
 };
