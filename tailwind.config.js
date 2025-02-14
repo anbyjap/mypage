@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "#252b48",
-        second: "#445069",
-        accent: "#f7e987",
+        main: "#222831",
+        second: "#393E46",
+        accent: "#00ADB5",
         light: "#5b9a8b",
         icon: "#fff",
-        font: "#f1f6f5",
+        font: "#EEEEEE",
       },
       width: {
         crtButtonSize: 60,
