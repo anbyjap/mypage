@@ -29,11 +29,11 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-svh bg-second">
-      <body className="h-fit bg-second flex justify-center items-center p-4 sm:p-0">
+    <div className="w-full h-svh bg-main">
+      <body className="h-fit bg-main flex justify-center items-center p-4 sm:p-0">
         <Toaster />
-        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
-          <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-second border rounded-lg">
+        <div className="sm:w-[80%] bg-main grid grid-cols-12 gap-4">
+          <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-main border rounded-lg">
             <nav className="flex justify-between items-center w-full h-full">
               <button
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
                       navigator.clipboard.writeText("haruru898@gmail.com");
                       toast.custom(() => (
                         <div
-                          className="animate-fadeInDown flex items-center justify-around  bg-second text-font border border-font px-6 py-4 shadow-md rounded-lg"
+                          className="animate-fadeInDown flex items-center justify-around  bg-main text-font border border-font px-6 py-4 shadow-md rounded-lg"
                         >
                           <FaCopy className="mr-2" />Email copied to clipbooard
                         </div>
@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
                   </button>
                 </div>
                 <button
-                  className="px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
+                  className="px-4 py-2 text-sm font-medium text-font bg-second rounded-lg hover:shadow-lg"
                 >
                   <a className="flex items-center justify-around" href={resumeFile} download="haruki_ambai_resume">
                     <MdFileDownload size={15} className="mr-1" />
@@ -142,7 +142,7 @@ export const Home: React.FC = () => {
                 <a 
                   href="https://u-aizu.ac.jp/en/"
                   target="_blank"
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-second rounded-lg hover:shadow-lg"
                 >  
                   Learn more
                   <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -164,7 +164,7 @@ export const Home: React.FC = () => {
                 <a
                   href="https://murphycharity.org/"
                   target="_blank"
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-second rounded-lg hover:shadow-lg"
                 >
                   Learn more
                   <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -175,7 +175,7 @@ export const Home: React.FC = () => {
           </ol>
         </div>
       </body>
-        <footer className="w-full h-[60px] bg-main text-font text-[10px] flex justify-center items-center">
+        <footer className="w-full h-[60px] bg-second text-font text-[10px] flex justify-center items-center">
           <p>© 2025 Haruki Ambai. All Rights Reserved.</p>
         </footer>
       {expandedItemIndex !== null && 

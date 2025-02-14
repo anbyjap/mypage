@@ -1,4 +1,4 @@
-import {icons} from "../icons/icons";
+import {icons} from "../icons";
 
 export type Name = keyof typeof icons;
 

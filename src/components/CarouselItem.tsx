@@ -32,7 +32,7 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
         <div className="group my-1 inline-flex flex-wrap justify-center items-center gap-2">
           <div className="flex flex-wrap gap-sm:block">
             {props.skills.map((skillName) => (
-              <SkillsIcon key={skillName} name={skillName} />
+              <SkillsIcon key={skillName} name={skillName} size={22} />
             ))}
           </div>
         </div>
