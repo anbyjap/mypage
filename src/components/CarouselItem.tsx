@@ -11,11 +11,10 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
     <div 
       className="
         sm:h-[250px] sm:min-w-[250px] sm:max-w-[300px] sm:col-span-6
-        md:col-span-4
-        lg:col-span-3
-        2xl:col-span-2
+        lg:col-span-4
+        2xl:col-span-3
         col-span-6
-        flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg"
+        flex flex-col bg-transparent shadow-sm rounded-lg hover:shadow-card cursor-pointer"
       onClick={props.onExpand}  
     >
       <div className="grow flex items-center bg-main m-2.5 overflow-hidden text-white rounded-md">
@@ -27,7 +26,7 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
       <div className="h-18">
         <div className="py-1 px-4">
           <div className="flex items-center">
-            <h6 className="text-main text-xl font-semibold truncate">
+            <h6 className="text-font text-xl font-semibold truncate">
               {props.name}
             </h6>
           </div>

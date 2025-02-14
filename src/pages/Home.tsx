@@ -50,8 +50,8 @@ export const Home: React.FC = () => {
         </nav>
       </header>
 
-      <body className="h-fit bg-second flex justify-center items-center">
-        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4 p-4">
+      <body className="h-fit bg-second flex justify-center items-center p-4 sm:p-0">
+        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
           {/* profile */}
           <div className="col-span-12 sm:h-[700px] w-full flex items-center animate-fadeInUp pt-10">
             <div className="text-font">
