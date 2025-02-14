@@ -14,7 +14,7 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
         lg:col-span-4
         2xl:col-span-3
         col-span-6
-        flex flex-col bg-transparent shadow-sm rounded-lg hover:shadow-card cursor-pointer"
+        flex flex-col bg-transparent shadow-sm rounded-lg hover:scale-105 cursor-pointer"
       onClick={props.onExpand}  
     >
       <div className="grow flex items-center bg-main my-2.5 overflow-hidden text-white rounded-md">
