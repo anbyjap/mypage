@@ -39,6 +39,10 @@ export default {
           "0%": { opacity: 0, transform: "translateY(50px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        fadeInDown: {
+          "0%": { opacity: 0, transform: "translateY(0)" },
+          "100%": { opacity: 1, transform: "translateY(5px)" },
+        },
         scroll: {
           "0%": { left: "0" },
           "100%": { left: "-100%" },
@@ -46,6 +50,7 @@ export default {
       },
       animation: {
         fadeInUp: "fadeInUp 1s ease-out forwards",
+        fadeInDown: "fadeInDown 0.7s ease-out forwards",
         scroll: "scroll 15s linear infinite",
       },
     },

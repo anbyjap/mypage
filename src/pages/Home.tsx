@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
-import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMailBulk, FaCopy } from "react-icons/fa";
 import { ProjectModal } from "../components/ProjectModal";
+import toast, { Toaster } from 'react-hot-toast';
 
-export function scrollToElement(
+function scrollToElement(
   element: HTMLHeadingElement | null,
   behavior: ScrollBehavior = "smooth"
 ): void {
@@ -28,6 +29,7 @@ export const Home: React.FC = () => {
   return (
     <div className="w-full h-svh bg-second">
       <body className="h-fit bg-second flex justify-center items-center p-4 sm:p-0">
+        <Toaster />
         <div id="profile" className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
           <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-second border rounded-lg">
             <nav className="flex justify-between items-center w-full h-full">
@@ -66,26 +68,33 @@ export const Home: React.FC = () => {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex w-fit space-x-4">
-                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
-                    <a
-                      href="mailto:haruru898@gmail.com"
-                      className="hover:opacity-30 focus:opacity-100"
-                    >
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText("haruru898@gmail.com");
+                      toast.custom(() => (
+                        <div
+                          className="animate-fadeInDown flex items-center justify-around  bg-second text-font border border-font px-6 py-4 shadow-md rounded-lg"
+                        >
+                          <FaCopy className="mr-2" />Email copied to clipbooard
+                        </div>
+                      ));
+                    }}
+                    className="text-font bg-transparent border-0 cursor-pointer outline-none p-0 hover:opacity-30"
+                  >
                       <FaMailBulk size={25} />
-                    </a>
                   </button>
-                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0 hover:opacity-30 focus:opacity-100">
                     <a
                       href="https://github.com/anbyjap"
-                      className="hover:opacity-30 focus:opacity-100"
+                      target="_blank"
                     >
                       <FaGithub size={25} />
                     </a>
                   </button>
-                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0 hover:opacity-30 focus:opacity-100">
                     <a
                       href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
-                      className="hover:opacity-30 focus:opacity-100"
+                      target="_blank"
                     >
                       <FaLinkedin size={25} />
                     </a>
