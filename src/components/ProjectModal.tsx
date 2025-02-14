@@ -2,6 +2,7 @@ import React from "react";
 import { CarouselItemProps } from "../types";
 import { SkillsIcon } from "./SkillsIcon";
 import { NewlineText } from "./NewLineText";
+import { LearnMoreButton } from "./LearnMoreButton";
 
 interface ProjectModalProps {
     project: CarouselItemProps;
@@ -20,7 +21,7 @@ export const ProjectModal:React.FC<ProjectModalProps> = ({project, onCloseModal}
                 >
                     <div 
                         onClick={e => e.stopPropagation()}
-                        className="flex flex-col rounded-md bg-second w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
+                        className="flex flex-col rounded-md bg-main w-[90%] h-2/3 sm:h-fit sm:w-2/3 p-3"
                     >
                         <div
                             className="sticky top-0 z-30 flex items-center justify-between p-2 border-b border-accent"
@@ -35,16 +36,9 @@ export const ProjectModal:React.FC<ProjectModalProps> = ({project, onCloseModal}
                         <div className="overflow-y-auto py-2">
                             <NewlineText text={project.description} />
                             {project.link !== "" && (
-                            <div className="flex justify-end mt-4">
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-accent hover:underline"
-                                >
-                                    ⇒Go and see it
-                                </a>
-                            </div>
+                                <div className="flex justify-end mt-4">
+                                    <LearnMoreButton link={project.link} />
+                                </div>
                             )}
                         </div>
                     </div>
