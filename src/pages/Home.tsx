@@ -2,23 +2,7 @@ import React, { useState } from "react";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
 
-import { Name } from "../types";
 import { ProjectModal } from "../components/ProjectModal";
-
-interface Skill {
-  name: Name;
-  size: number;
-  experience: string;
-}
-
-const skills: Skill[] = [
-  { name: "React", size: 50, experience: "2 years" },
-  { name: "TypeScript", size: 50, experience: "1.5 years" },
-  { name: "Python", size: 50, experience: "4 years" },
-  { name: "Docker", size: 50, experience: "2 year" },
-  { name: "Mysql", size: 50, experience: "2 years" },
-  { name: "PostgreSQL", size: 50, experience: "1 years" },
-];
 
 const tabs = [
   {
@@ -37,7 +21,6 @@ const tabs = [
 
 export const Home: React.FC = () => {
   const [tabIndex, setTabIndex] = useState(0);
-  const [hoveredSkillName, setHoveredSkillName] = useState<string>("");
   const [expandedItemIndex, setExpandedItemIndex] = useState<null | number>(
     null,
   );
