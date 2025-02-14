@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
+import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
 
 import { ProjectModal } from "../components/ProjectModal";
 
@@ -50,9 +51,9 @@ export const Home: React.FC = () => {
       </header>
 
       <body className="h-fit bg-second flex justify-center items-center">
-        <div className="h-fit sm:w-[80%] bg-second grid grid-cols-12 gap-4 p-4">
+        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4 p-4">
           {/* profile */}
-          <div className="col-span-12 w-full h-full flex flex-col justify-center items-center animate-fadeInUp">
+          <div className="col-span-12 sm:h-[700px] w-full flex items-center animate-fadeInUp pt-10">
             <div className="text-font">
               <h1 className="text-3xl font-bold text-font">
                 Hello! I'm{" "}
@@ -60,31 +61,32 @@ export const Home: React.FC = () => {
               </h1>
               <h3 className="text-xl mt-2">with 2+ years experience</h3>
               <div className="flex w-fit mt-4 space-x-4">
-                <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+                <button className="text-left text-font  bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="mailto:haruru898@gmail.com"
                     className="hover:text-gray-300"
                   >
-                    Email
+                    <FaMailBulk size={25} />
                   </a>
                 </button>
-                <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+                <button className=" text-left text-font bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="https://github.com/anbyjap"
                     className="hover:text-gray-300"
                   >
-                    GitHub
+                    <FaGithub size={25} />
                   </a>
                 </button>
-                <button className="bg-transparent border-0 cursor-pointer overflow-hidden outline-none p-0">
+                <button className="text-left text-font bg-transparent border-0 cursor-pointer outline-none p-0">
                   <a
                     href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
                     className="hover:text-gray-300"
                   >
-                    LinkedIn
+                    <FaLinkedin size={25} />
                   </a>
                 </button>
               </div>
+
             </div>
           </div>
           {/* projects */}
