@@ -33,21 +33,21 @@ export const Home: React.FC = () => {
             <nav className="flex justify-between items-center w-full h-full">
               <button
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70 focus:opacity-100"
               >
                 Profile
               </button>
               <div className="h-2/3 w-[1px] bg-font" />
               <button
                 onClick={() => scrollToElement(projectsRef.current)}
-                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70 focus:opacity-100"
               >
                 Projects
               </button>
               <div className="h-2/3 w-[1px] bg-font" />
               <button
                 onClick={() => scrollToElement(aboutRef.current)}
-                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70 focus:opacity-100"
               >
                 About
               </button>
