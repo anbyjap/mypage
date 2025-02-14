@@ -9,7 +9,8 @@ export default {
         accent: "#00ADB5",
         light: "#5b9a8b",
         icon: "#fff",
-        font: "#EEEEEE",
+        font: "rgb(238, 238, 238)",
+        fontSub: "rgb(238, 238, 238, 0.5)"
       },
       width: {
         crtButtonSize: 60,
