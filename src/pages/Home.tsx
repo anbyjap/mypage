@@ -30,7 +30,7 @@ export const Home: React.FC = () => {
     <div className="w-full h-svh bg-second">
       <body className="h-fit bg-second flex justify-center items-center p-4 sm:p-0">
         <Toaster />
-        <div id="profile" className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
+        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
           <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-second border rounded-lg">
             <nav className="flex justify-between items-center w-full h-full">
               <button
@@ -175,6 +175,9 @@ export const Home: React.FC = () => {
           </ol>
         </div>
       </body>
+        <footer className="w-full h-[60px] bg-main text-font text-[10px] flex justify-center items-center">
+          <p>© 2025 Haruki Ambai. All Rights Reserved.</p>
+        </footer>
       {expandedItemIndex !== null && 
         <ProjectModal 
           project={projects[expandedItemIndex]}
