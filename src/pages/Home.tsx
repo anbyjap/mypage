@@ -1,27 +1,22 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { projects } from "../data/projects";
 import CarouselItem from "../components/CarouselItem";
 import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
-
 import { ProjectModal } from "../components/ProjectModal";
 
-const tabs = [
-  {
-    icon: "aaa",
-    label: "Profile",
-  },
-  {
-    icon: "aaa",
-    label: "Projects",
-  },
-  {
-    icon: "aaa",
-    label: "About",
-  },
-];
+export function scrollToElement(
+  element: HTMLHeadingElement | null,
+  behavior: ScrollBehavior = "smooth"
+): void {
+  if (!element) return;
+  const elementY = element.getBoundingClientRect().top + window.pageYOffset;
+  const targetPosition = elementY - 80;
+  window.scrollTo({ top: targetPosition, behavior });
+}
 
 export const Home: React.FC = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const projectsRef = useRef<HTMLHeadingElement>(null);
+  const aboutRef = useRef<HTMLHeadingElement>(null);
   const [expandedItemIndex, setExpandedItemIndex] = useState<null | number>(
     null,
   );
@@ -32,28 +27,35 @@ export const Home: React.FC = () => {
 
   return (
     <div className="w-full h-svh bg-second">
-      <header className="sticky top-0 z-10 w-full h-[50px]">
-        <nav className="flex justify-between w-full h-full bg-gray-200">
-          {tabs.map((tab, index) => (
-            <button
-              key={index}
-              onClick={() => setTabIndex(index)}
-              className={`flex items-center justify-center p-4 w-full bg-main cursor-pointer ${
-                tabIndex === index
-                  ? "text-accent"
-                  : "text-font hover:bg-blue-200 "
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-      </header>
-
       <body className="h-fit bg-second flex justify-center items-center p-4 sm:p-0">
-        <div className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
+        <div id="profile" className="sm:w-[80%] bg-second grid grid-cols-12 gap-4">
+          <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-second border rounded-lg">
+            <nav className="flex justify-between items-center w-full h-full">
+              <button
+                onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+              >
+                Profile
+              </button>
+              <div className="h-2/3 w-[1px] bg-font" />
+              <button
+                onClick={() => scrollToElement(projectsRef.current)}
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+              >
+                Projects
+              </button>
+              <div className="h-2/3 w-[1px] bg-font" />
+              <button
+                onClick={() => scrollToElement(aboutRef.current)}
+                className="flex items-center justify-center p-4 w-full bg-transparent cursor-pointer text-font hover:opacity-70"
+              >
+                About
+              </button>
+            </nav>
+          </header>
+
           {/* profile */}
-          <div className="col-span-12 sm:h-[700px] w-full flex items-center animate-fadeInUp pt-10">
+          <div className="col-span-12 h-[400px] sm:h-[700px] w-full flex items-center animate-fadeInUp">
             <div className="text-font">
               <h1 className="text-3xl font-bold text-font">
                 Hello! I'm{" "}
@@ -90,7 +92,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
           {/* projects */}
-          <h1 className="col-span-12 text-3xl text-font font-bold">
+          <h1 ref={projectsRef} className="col-span-12 text-3xl text-font font-bold">
             Projects
           </h1>
           {projects.map((project, i) => (
@@ -104,11 +106,11 @@ export const Home: React.FC = () => {
               onExpand={() => toggleExpand(i)}
             />
           ))}
-          {/* Education */}
-          <h1 className="col-span-12 text-3xl text-font font-bold">
+          {/* About */}
+          <h1 ref={aboutRef} className="col-span-12 text-3xl text-font font-bold">
             About
           </h1>
-          <ol className="col-span-12 relative border-s border-main mb-10">
+          <ol className="col-span-12 relative border-s border-main ">
             <li className="mb-10 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-fontSub">April 2019 - March 2022</time>
