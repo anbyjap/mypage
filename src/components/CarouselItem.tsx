@@ -17,26 +17,24 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
         flex flex-col bg-transparent shadow-sm rounded-lg hover:shadow-card cursor-pointer"
       onClick={props.onExpand}  
     >
-      <div className="grow flex items-center bg-main m-2.5 overflow-hidden text-white rounded-md">
+      <div className="grow flex items-center bg-main my-2.5 overflow-hidden text-white rounded-md">
         <img
           src={props.imgSrc}
           alt={props.name}
         />
       </div>
       <div className="h-18">
-        <div className="py-1 px-4">
-          <div className="flex items-center">
-            <h6 className="text-font text-xl font-semibold truncate">
-              {props.name}
-            </h6>
-          </div>
+        <div className="flex items-center">
+          <h6 className="text-font text-xl font-semibold truncate">
+            {props.name}
+          </h6>
+        </div>
         <div className="group my-1 inline-flex flex-wrap justify-center items-center gap-2">
           <div className="flex flex-wrap gap-sm:block">
             {props.skills.map((skillName) => (
               <SkillsIcon key={skillName} name={skillName} />
             ))}
           </div>
-        </div>
         </div>
       </div>
     </div>  
