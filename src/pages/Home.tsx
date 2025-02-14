@@ -133,7 +133,7 @@ export const Home: React.FC = () => {
           <h1 ref={aboutRef} className="col-span-12 text-3xl text-font font-bold my-5">
             About
           </h1>
-          <ol className="col-span-12 relative border-s border-main ml-2 mb-10">
+          <ol className="col-span-12 relative border-s border-second ml-2 mb-10">
             <li className="mb-10 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-fontSub">April 2019 - March 2022</time>
