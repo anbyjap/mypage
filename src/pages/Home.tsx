@@ -57,36 +57,50 @@ export const Home: React.FC = () => {
           {/* profile */}
           <div className="col-span-12 h-[400px] sm:h-[700px] w-full flex items-center animate-fadeInUp">
             <div className="text-font">
-              <h1 className="text-3xl font-bold text-font">
-                Hello! I'm{" "}
-                <span className="text-accent">Full Stack Web Developer</span>
-              </h1>
-              <h3 className="text-xl text-fontSub mt-2">with 3+ years experience</h3>
-              <div className="flex w-fit mt-4 space-x-4">
-                <button className="text-font  bg-transparent border-0 cursor-pointer outline-none p-0">
-                  <a
-                    href="mailto:haruru898@gmail.com"
-                    className="hover:opacity-30 focus:opacity-100"
-                  >
-                    <FaMailBulk size={25} />
-                  </a>
-                </button>
-                <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
-                  <a
-                    href="https://github.com/anbyjap"
-                    className="hover:opacity-30 focus:opacity-100"
-                  >
-                    <FaGithub size={25} />
-                  </a>
-                </button>
-                <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
-                  <a
-                    href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
-                    className="hover:opacity-30 focus:opacity-100"
-                  >
-                    <FaLinkedin size={25} />
-                  </a>
-                </button>
+              <div className="flex justify-center flex-col h-32">
+                <h1 className="text-3xl font-bold text-font">
+                  Hello! I'm{" "}
+                  <span className="text-accent">Full Stack Web Developer</span>
+                </h1>
+                <h3 className="text-xl text-fontSub">with 3+ years experience</h3>
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex w-fit space-x-4">
+                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                    <a
+                      href="mailto:haruru898@gmail.com"
+                      className="hover:opacity-30 focus:opacity-100"
+                    >
+                      <FaMailBulk size={25} />
+                    </a>
+                  </button>
+                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                    <a
+                      href="https://github.com/anbyjap"
+                      className="hover:opacity-30 focus:opacity-100"
+                    >
+                      <FaGithub size={25} />
+                    </a>
+                  </button>
+                  <button className="text-font bg-transparent border-0 cursor-pointer outline-none p-0">
+                    <a
+                      href="https://www.linkedin.com/in/haruki-ambai-76a66025b/"
+                      className="hover:opacity-30 focus:opacity-100"
+                    >
+                      <FaLinkedin size={25} />
+                    </a>
+                  </button>
+                </div>
+                <a
+                  href="https://murphycharity.org/"
+                  target="_blank"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
+                >
+                  See Resume
+                  <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+                </a>
               </div>
 
             </div>
@@ -118,6 +132,7 @@ export const Home: React.FC = () => {
                 <p className="mb-4 text-font">Bachelor of Computer Science </p>
                 <a 
                   href="https://u-aizu.ac.jp/en/"
+                  target="_blank"
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
                 >  
                   Learn more
@@ -139,6 +154,7 @@ export const Home: React.FC = () => {
                 <p className="mb-4 text-font">Contributing to development of the loan app for women in Uganda to borrow money from government through this app.</p>
                 <a
                   href="https://murphycharity.org/"
+                  target="_blank"
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
                 >
                   Learn more
