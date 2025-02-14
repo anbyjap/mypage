@@ -115,7 +115,7 @@ export const Home: React.FC = () => {
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-fontSub">April 2019 - March 2022</time>
                 <h3 className="text-lg font-semibold text-font">The University of Aizu</h3>
-                <p className="mb-4 text-base font-normal text-font">Bachelor of Computer Science </p>
+                <p className="mb-4 text-font">Bachelor of Computer Science </p>
                 <a 
                   href="https://u-aizu.ac.jp/en/"
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
@@ -130,13 +130,13 @@ export const Home: React.FC = () => {
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-fontSub">Janualy 2021 - Current</time>
                 <h3 className="text-lg font-semibold text-font">Web Developer in Aizulab</h3>
-                <p className="text-base font-normal text-font">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+                <p className="text-font">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
             </li>
             <li className="mb-10 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-fontSub">Janualy 2025 - Current</time>
                 <h3 className="text-lg font-semibold text-font">Volunteer as Web developer in Murphy charitable foundation Uganda</h3>
-                <p className="mb-4 text-base font-normal text-font">Contributing to development of the loan app for women in Uganda to borrow money from government through this app.</p>
+                <p className="mb-4 text-font">Contributing to development of the loan app for women in Uganda to borrow money from government through this app.</p>
                 <a
                   href="https://murphycharity.org/"
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"

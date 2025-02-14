@@ -25,7 +25,7 @@ const CarouselItem: React.FC<NewCarouselItemProps> = (props) => {
       </div>
       <div className="h-18">
         <div className="flex items-center">
-          <h6 className="text-font text-xl font-semibold truncate">
+          <h6 className="text-font text-xl truncate">
             {props.name}
           </h6>
         </div>
