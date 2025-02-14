@@ -103,12 +103,9 @@ export const Home: React.FC = () => {
                   </button>
                 </div>
                 <button
-                  onClick={() => {
-
-                  }}
                   className="px-4 py-2 text-sm font-medium text-font bg-main rounded-lg hover:shadow-lg"
                 >
-                  <a className="flex items-center justify-around " href={resumeFile} download="haruki_ambai_resume">
+                  <a className="flex items-center justify-around" href={resumeFile} download="haruki_ambai_resume">
                     <MdFileDownload size={15} className="mr-1" />
                     Download Resume
                   </a>
