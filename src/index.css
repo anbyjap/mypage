@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tailwindcss";
 
 * {
   margin: 0;
@@ -19,4 +20,69 @@ body,
 #app,
 #app > div {
   height: 100svh;
+}
+
+
+@layer base {
+  :root {
+    --color-main: #222831;
+    --color-second: #393E46;
+    --color-accent: #00ADB5;
+    --color-light: #5b9a8b;
+    --color-icon: #fff;
+    --color-font: rgb(238, 238, 238);
+    --color-fontSub: rgba(238, 238, 238, 0.5);
+  }
+}
+
+@layer utilities {
+  .bg-main   { background-color: var(--color-main); }
+  .bg-second { background-color: var(--color-second); }
+  .bg-accent { background-color: var(--color-accent); }
+  .bg-light  { background-color: var(--color-light); }
+  .text-icon     { color: var(--color-icon); }
+  .text-font     { color: var(--color-font); }
+  .text-fontSub  { color: var(--color-fontSub); }
+}
+
+@layer utilities {
+  .w-crtButtonSize { width: 60px; }
+  .h-crtButtonSize { height: 60px; }
+}
+
+@layer utilities {
+  .shadow-default  { box-shadow: 0px 8px 13px -3px rgba(0, 0, 0, 0.07); }
+  .shadow-card     { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12); }
+  .shadow-card-2   { box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); }
+  .shadow-switcher { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), inset 0px 2px 2px #FFFFFF, inset 0px -1px 1px rgba(0, 0, 0, 0.1); }
+  .shadow-switch-1 { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15); }
+  .shadow-1        { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08); }
+  .shadow-2        { box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12); }
+  .shadow-3        { box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.14); }
+  .shadow-4        { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12); }
+  .shadow-5        { box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15); }
+  .shadow-6        { box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); }
+  .shadow-7        { box-shadow: -5px 0 0 #313D4A, 5px 0 0 #313D4A; }
+  .shadow-8        { box-shadow: 1px 0 0 #313D4A, -1px 0 0 #313D4A, 0 1px 0 #313D4A, 0 -1px 0 #313D4A, 0 3px 13px rgb(0 0 0 / 8%); }
+}
+
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0%   { opacity: 0; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(5px); }
+}
+
+@keyframes scroll {
+  0%   { left: 0; }
+  100% { left: -100%; }
+}
+
+@layer utilities {
+  .animate-fadeInUp   { animation: fadeInUp 1s ease-out forwards; }
+  .animate-fadeInDown { animation: fadeInDown 0.7s ease-out forwards; }
+  .animate-scroll     { animation: scroll 15s linear infinite; }
 }
