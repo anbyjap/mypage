@@ -34,7 +34,7 @@ export const Home: React.FC = () => {
       <body className="h-fit bg-main flex justify-center items-center p-4 sm:p-0">
         <Toaster />
         <div className="sm:w-[80%] bg-main grid grid-cols-12 gap-4">
-          <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-main border rounded-lg">
+          <header className="sticky top-4 col-span-12 z-10 h-[50px] w-full bg-second border rounded-lg border-transparent">
             <nav className="flex justify-between items-center w-full h-full">
               <button
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
